@@ -1,3 +1,8 @@
-<p>
-  main-page works!
-</p>
+<h1>Hello movies-api-service!!!</h1>
+<button (click)="loadPopularMovies()">Películas Populares</button>
+<div class="list-movies" *ngFor="let movie of data">
+  <div class="movies">
+    <h1>{{ movie.title || movie.original_title || movie.original_name}}</h1>
+  </div>
+</div>
+<movie-detail></movie-detail>
