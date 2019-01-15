@@ -1,8 +1,15 @@
 <h1>Hello movies-api-service!!!</h1>
-<button (click)="loadPopularMovies()">Películas Populares</button>
-<div class="list-movies" *ngFor="let movie of data">
-  <div class="movies">
-    <h1>{{ movie.title || movie.original_title || movie.original_name}}</h1>
-  </div>
+<nav class="menu">
+  <button (click)="loadPopularMovies()">Películas Populares</button>
+  <button (click)="loadTrendingMovies()">Películas Trending</button>
+
+</nav>
+<!-- <div>{{ movie | json}}</div>
+ -->
+<div class="list-movies">
+  <a routerLink="/movie/{{ movie.id }}" class="movies" *ngFor="let movie of data">
+    <h2>{{ movie.title || movie.original_title || movie.original_name}}</h2> <h3>{{ movie.vote_average }}</h3>
+    <h4>{{ movie.release_date }}</h4>
+    <img src="{{ imgDomain + movie.poster_path }}" alt="Cartel de la pelicula">
+  </a>
 </div>
-<movie-detail></movie-detail>

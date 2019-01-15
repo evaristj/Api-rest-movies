@@ -16,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     MoviesService
