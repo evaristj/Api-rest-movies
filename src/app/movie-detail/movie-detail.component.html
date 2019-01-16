@@ -1,3 +1,19 @@
-<p>
-  movie-detail works!
-</p>
+<div *ngIf="singleMovie">
+  <div class="list-movies">
+    <div class="movies">
+      <h2>{{ singleMovie.title || singleMovie.original_title || singleMovie.original_name}}</h2>
+      <h3>{{ singleMovie.vote_average }}</h3>
+      <h4>{{ singleMovie.release_date }}</h4>
+      <img src="{{ getImgDomain + singleMovie.poster_path }}" alt="Cartel de la pelicula">
+      <div class="description">
+        <p>
+          <b>Sinopsis:</b> {{ singleMovie.overview }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>{{ singleMovie | json}}</div>
+</div>
+<div class="not-found" *ngIf="!singleMovie">
+  <h1>El Id de película no ha sido encontrado</h1>
+</div>

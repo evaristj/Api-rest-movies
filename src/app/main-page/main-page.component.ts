@@ -9,15 +9,15 @@ import { MoviesService } from '../movies.service';
 })
 export class MainPageComponent implements OnInit {
   data: Array<object>;
-  imgDomain = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/';
+  getImgDomain = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/';
 
   constructor(private api: MoviesService) { }
-  loadPopularMovies() {
+  showPopularMovies() {
     this.api.popularMovies().then((result: any) => {
       this.data = result.results;
     });
   }
-  loadTrendingMovies() {
+  showTrendingMovies() {
     this.api.trendingMovies().then((result: any) => {
       this.data = result.results;
     });
