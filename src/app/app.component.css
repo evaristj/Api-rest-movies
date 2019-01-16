@@ -1,0 +1,6 @@
+.mainNavMenu {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap row;
+    margin: 2em;
+}

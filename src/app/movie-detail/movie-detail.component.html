@@ -14,6 +14,9 @@
   </div>
   <div>{{ singleMovie | json}}</div>
 </div>
-<div class="not-found" *ngIf="!singleMovie">
+<div class="loadingMovie" *ngIf="loading">
+  <h1>Buscando peli...</h1>
+</div>
+<div class="not-found" *ngIf="!singleMovie && !loading">
   <h1>El Id de película no ha sido encontrado</h1>
 </div>

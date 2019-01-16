@@ -15,6 +15,6 @@
 .description {
     line-height: 1.2em;
 }
-.not-found {
+.not-found, .loadingMovie {
     text-align: center;
 }
